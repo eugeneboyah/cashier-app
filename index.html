@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Coffee Shop Receipt Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">HOT & FRESH CAFF</h1>
+        <h3>Congotown, oppt Dominion church</h3>
+        <h3>0775223168 / 0880488080</h3>
+    </div>
+
+    <div class="head_2">
+        <h3>Staff Cashier</h3>
+        <h3>Date 2023-11-27</h3>
+    </div>
+
+    <div class="cash_sales">
+        <h3>Cash Sales</h3>
+        <form id="orderForm">
+            <div>
+                <label for="customer_name">Customer Name:</label><br>
+                <input type="text" id="customer_name" name="customer_name" required>
+            </div>
+        
+            <div>
+                <label for="order_items">Order Items:</label><br>
+                <textarea id="order_items" name="order_items" rows="4" required></textarea>
+            </div>
+        
+            <div>
+                <label for="quantity">Quantity:</label><br>
+                <input type="number" id="quantity" name="quantity" required>
+            </div>
+        
+            <div>
+                <label for="price">Price:</label><br>
+                <input type="number" id="price" name="price" required>
+            </div>
+        
+            <div>
+                <label for="currency">Currency:</label><br>
+                <select id="currency" name="currency" required>
+                    <option value="LRD">LRD</option>
+                    <option value="USD">USD</option>
+                </select>
+            </div>
+        
+            <div>
+                <label for="total">Total:</label><br>
+                <input type="text" id="total" name="total" readonly>
+                <button type="button" onclick="calculateTotal()">Calculate Total</button>
+            </div>
+        
+            <div>
+                <label for="order_date">Date of the Order:</label><br>
+                <input type="date" id="order_date" name="order_date" required>
+            </div>
+        
+            <div>
+                <input type="button" value="Add Item" onclick="addItem()">
+            </div>
+        
+            <div>
+                <input type="button" value="Delete Item" onclick="deleteItem()">
+            </div>
+        
+            <div>
+                <input type="submit" value="Generate Receipt">
+            </div>
+        </form>
+        
+        <hr>
+        
+        <div id="receiptOutput"></div>
+        
+        <script src="index.js">
+          
+        </script>
